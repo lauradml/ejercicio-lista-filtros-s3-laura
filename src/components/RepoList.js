@@ -13,7 +13,7 @@ class RepoList extends React.Component {
             if(this.props.language ===''){
               return true
             }else{
-              return this.props.language=== item.language
+              return this.props.language === item.language
             }
           })
           .map(item=>{

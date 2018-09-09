@@ -12,7 +12,7 @@ class Home extends React.Component {
           <Search
             filterName={this.props.filterName}
             filterLanguage={this.props.filterLanguage}
-            language={this.props.language}
+          
           />
         </header>
         <RepoList
@@ -21,7 +21,7 @@ class Home extends React.Component {
           description={this.props.description}
           language={this.props.language}
           filterName={this.props.name}
-          filterLanguage={this.props.filterLanguage}
+          filterLanguage={this.props.language}
         />
 
     </React.Fragment>
