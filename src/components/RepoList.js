@@ -9,6 +9,13 @@ class RepoList extends React.Component {
           .filter(item => {
               return item.name.toLowerCase().includes(this.props.filterName);
             })
+          .filter(item=>{
+            if(this.props.language ===''){
+              return true
+            }else{
+              return this.props.language=== item.language
+            }
+          })
           .map(item=>{
           return (
             <li className="app-item" key={item.id}>

@@ -10,6 +10,7 @@ class App extends Component {
   super(props);
 
     this.filterName = this.filterName.bind(this);
+    this.filterLanguage = this.filterLanguage.bind(this);
 
   this.state = {
     repos: [],
@@ -24,6 +25,13 @@ filterName(e) {
       name: resultado
     });
   }
+
+  filterLanguage(e) {
+  const resultado = e.currentTarget.value;
+  this.setState({
+    language: resultado
+  });
+}
 
 componentDidMount() {
 this.getRepos();
@@ -47,6 +55,7 @@ fetch(url)
         description={this.state.description}
         language={this.state.languaje}
         filterName={this.filterName}
+        filterLanguage={this.filterLanguage}
         />
       </div>
     );
