@@ -10,7 +10,7 @@ class RepoList extends React.Component {
             })
           .map(item=>{
           return (
-            <li className="app-item">
+            <li className="app-item" key={item.id}>
               <h2>{item.name}</h2>
               <p>{item.description}</p>
               <p>{item.language}</p>

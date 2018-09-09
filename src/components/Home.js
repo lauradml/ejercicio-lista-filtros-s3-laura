@@ -16,7 +16,7 @@ class Home extends React.Component {
         name={this.props.name}
         description={this.props.description}
         language={this.props.language}
-        filterName={this.props.filterName}
+        filterName={this.props.name}
         />
 
     </React.Fragment>
