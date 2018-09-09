@@ -47,7 +47,6 @@ fetch(url)
     });
   });
 }
-
   render() {
     return (
 
