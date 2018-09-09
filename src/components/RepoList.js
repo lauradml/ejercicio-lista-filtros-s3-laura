@@ -1,5 +1,6 @@
 import React from 'react';
 import Repo from './Repo';
+import {Link} from 'react-router-dom';
 
 class RepoList extends React.Component {
   render(){
@@ -19,7 +20,9 @@ class RepoList extends React.Component {
           .map(item=>{
           return (
             <li className="app-item" key={item.id}>
-              <Repo item={item}/>
+                <Link to={`/repoDetail/${item.id}`} >
+                  <Repo item={item}/>
+                </Link>
             </li>
           );
         })}

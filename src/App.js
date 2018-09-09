@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Home from './components/Home';
 import RepoDetail from'./components/RepoDetail';
+import {Switch, Route} from 'react-router-dom';
+
 
 const url='https://api.github.com/orgs/Adalab/repos';
 
@@ -45,18 +47,26 @@ fetch(url)
     });
   });
 }
-
   render() {
     return (
+
       <div className="App">
-        <Home
-        repos={this.state.repos}
-        name={this.state.name}
-        description={this.state.description}
-        language={this.state.language}
-        filterName={this.filterName}
-        filterLanguage={this.filterLanguage}
-        />
+         <Switch>
+            <Route exact path="/" render={ () =><Home
+              repos={this.state.repos}
+              name={this.state.name}
+              description={this.state.description}
+              language={this.state.language}
+              filterName={this.filterName}
+              filterLanguage={this.filterLanguage}
+            />} />
+            <Route path="/repoDetail/:id" render={(props) =>
+               <RepoDetail
+                match={props.match}
+                repos={this.state.repos}
+              />} />
+          </Switch>
+
       </div>
     );
   }
