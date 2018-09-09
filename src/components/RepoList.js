@@ -3,11 +3,15 @@ import React from 'react';
 class RepoList extends React.Component {
   render(){
     return (
-      <ul className="app__list">
-        {this.props.repos.map((item, index)=>{
+      <ul className="app-list">
+        {this.props.repos
+          .filter(item => {
+              return item.name.toLowerCase().includes(this.props.filterName);
+            })
+          .map(item=>{
           return (
-            <li className="app__item" key={index}>
-              <h2>{ item.name}</h2>
+            <li className="app-item">
+              <h2>{item.name}</h2>
               <p>{item.description}</p>
               <p>{item.language}</p>
              </li>

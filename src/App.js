@@ -9,14 +9,22 @@ class App extends Component {
   constructor(props) {
   super(props);
 
+    this.filterName = this.filterName.bind(this);
+
   this.state = {
     repos: [],
     name:'',
     description:'',
     language:''
   }
-
 }
+filterName(e) {
+    const resultado = e.currentTarget.value.toLowerCase();
+    this.setState({
+      name: resultado
+    });
+  }
+
 componentDidMount() {
 this.getRepos();
 }
@@ -37,8 +45,9 @@ fetch(url)
         repos={this.state.repos}
         name={this.state.name}
         description={this.state.description}
-        language={this.state.languaje
-        }/>
+        language={this.state.languaje}
+        filterName={this.filterName}
+        />
       </div>
     );
   }
