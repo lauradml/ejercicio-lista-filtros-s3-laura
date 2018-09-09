@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 class RepoDetail extends React.Component {
 
   render(){
-const {name, description, language, stargazers, watchers, forks} = this.props.repos.find( (i) => i.id === this.props.match.params.id);
+const {name, description, language, stargazers, watchers, forks} = this.props.repos.find( (i) => i.id == this.props.match.params.id);
 
       return (
         <div className='container-detail' >
