@@ -9,14 +9,19 @@ class Home extends React.Component {
       <React.Fragment>
         <header className="app-header">
           <h1 className='title'>Repos at Adalab in Github</h1>
-          <Search filterName={this.props.filterName}/>
+          <Search
+            filterName={this.props.filterName}
+            filterLanguage={this.props.filterLanguage}
+            language={this.props.language}
+          />
         </header>
         <RepoList
-        repos={this.props.repos}
-        name={this.props.name}
-        description={this.props.description}
-        language={this.props.language}
-        filterName={this.props.name}
+          repos={this.props.repos}
+          name={this.props.name}
+          description={this.props.description}
+          language={this.props.language}
+          filterName={this.props.name}
+          filterLanguage={this.props.filterLanguage}
         />
 
     </React.Fragment>
