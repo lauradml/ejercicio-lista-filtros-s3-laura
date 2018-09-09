@@ -53,7 +53,7 @@ fetch(url)
         repos={this.state.repos}
         name={this.state.name}
         description={this.state.description}
-        language={this.state.languaje}
+        language={this.state.language}
         filterName={this.filterName}
         filterLanguage={this.filterLanguage}
         />
