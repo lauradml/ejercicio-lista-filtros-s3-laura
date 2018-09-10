@@ -13,7 +13,21 @@
   display: grid;
   grid-template-columns:1fr 1fr 1fr ;
   grid-gap: 30px;
-
-
-
+}
+.app-item{
+  text-align: left;
+}
+.container-detail{
+  padding-top: 150px;
+}
+.app-item-detail{
+  text-align: left;
+}
+.back-btn{
+  text-decoration: none;
+  color:#000000;
+  background-color:#a9afad;
+  border-style: double;
+  border-radius: 5xp;
+  padding: 5px 10px 5px 10px ;
 }

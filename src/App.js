@@ -64,6 +64,7 @@ fetch(url)
                <RepoDetail
                 match={props.match}
                 repos={this.state.repos}
+                repo={this.state.repos[props.match.id]}
               />} />
           </Switch>
 
