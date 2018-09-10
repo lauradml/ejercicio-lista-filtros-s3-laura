@@ -18,13 +18,13 @@ class Repo extends React.Component {
 
       const{name, description, language}= this.props.item;
     return (
-      <div>
+      <React.Fragment>
         <Link to={`/repoDetail/${this.props.item.id}`} >
           <h2>{name}</h2>
         </Link>
         <p>{description}</p>
         <p> {this.languages(language)}</p>
-      </div>
+      </React.Fragment>
 
     );
   }
